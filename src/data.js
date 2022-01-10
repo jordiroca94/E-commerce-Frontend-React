@@ -27,16 +27,19 @@ export const categories = [
     id: 1,
     img: "https://images.unsplash.com/photo-1616641611019-0830e6383a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
     title: "SEA",
+    cat:"sea",
   },
   {
     id: 2,
     img: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
     title: "MOUNTAIN",
+    cat:"mountain",
   },
   {
     id: 3,
     img: "https://img.redbull.com/images/c_crop,x_1068,y_0,h_3648,w_4053/c_fill,w_860,h_782/q_auto,f_auto/redbullcom/2018/07/05/40bf4f23-8fbc-4b11-a271-4e20ee2dfd7e/snowboarding-collection",
     title: "SNOW",
+    cat:"snow",
   },
 ];
 
@@ -70,6 +73,7 @@ export const popularProducts = [
     id: 6,
     img: "https://www.trekkinn.com/f/13801/138018800/la-sportiva-botas-senderismo-aequilibrium-lt-goretex.jpg",
     title: "mountain boots",
+    categories:"mountain",
   },
   {
     id: 7,

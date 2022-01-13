@@ -169,15 +169,16 @@ const Cart = () => {
   }, [stripeToken, cart.total, history]);
   return (
     <Container>
+       <Announcement />
       <Navbar />
-      <Announcement />
+   
       <Wrapper>
         <Title>Your Bag</Title>
         <Top>
           <TopButton>Continue Shopping</TopButton>
           <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
-            <TopText> Wishlist (0)</TopText>
+            <TopText></TopText>
+            <TopText> </TopText>
           </TopTexts>
         </Top>
         <Bottom>

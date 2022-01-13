@@ -9,10 +9,11 @@ import {
 } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
-  ${mobile({flexDirection: "column"})}; 
+  ${mobile({ flexDirection: "column" })};
 `;
 const Left = styled.div`
   flex: 1;
@@ -42,7 +43,7 @@ const SocialIcon = styled.h1`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({display: "none"})}; 
+  ${mobile({ display: "none" })};
 `;
 
 const Title = styled.h3`
@@ -53,19 +54,18 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  color: gray;
 `;
 
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({backgroundColor: "#fff8f8"})}; 
+  ${mobile({ backgroundColor: "#fff8f8" })};
 `;
 
 const ContactItem = styled.div`
@@ -88,28 +88,36 @@ const Footer = () => {
           Created By <b>Jordi Roca Soler</b>
         </CreatedBy>
         <SocialContainer>
-          <SocialIcon color="3B5999">
-            <Facebook />
-          </SocialIcon>
-          <SocialIcon color="E4405F">
-            <Instagram />
-          </SocialIcon>
-          <SocialIcon color="55ACEE">
-            <Twitter />
-          </SocialIcon>
-          <SocialIcon color="3B5999">
-            <LinkedIn />
-          </SocialIcon>
+          <a href="https://www.facebook.com/jordi.roca.33/" target="blank">
+            <SocialIcon color="3B5999">
+              <Facebook />
+            </SocialIcon>
+          </a>
+          <a href="https://www.instagram.com/joordii9/" target="blank">
+            <SocialIcon color="E4405F">
+              <Instagram />
+            </SocialIcon>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jordi-roca-soler/"
+            target="blank"
+          >
+            <SocialIcon color="3B5999">
+              <LinkedIn />
+            </SocialIcon>
+          </a>
         </SocialContainer>
       </Left>
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <ListItem>Home</ListItem>
+          </Link>
+          <Link to={"/cart"} style={{ textDecoration: "none" }}>
+            <ListItem>Cart</ListItem>
+          </Link>
           <ListItem>My Account</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
         </List>
       </Center>
       <Right>

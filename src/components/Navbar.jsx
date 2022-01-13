@@ -50,6 +50,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  color:gray;
   ${mobile({ fontSize: "24px" })};
 `;
 
@@ -76,14 +77,12 @@ const Navbar = () => {
     <Container className="container">
       <Wrapper>
         <Left>
-          <Language>EN</Language>
-          <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
+         
         </Left>
         <Center>
-          <Logo> MY-WAY </Logo>
+          <Link to={"/"} style={{ textDecoration: "none",  }}>
+            <Logo> MY-WAY </Logo>
+          </Link>
         </Center>
         <Right>
           <Link to={"/signup"} style={{ textDecoration: "none" }}>
@@ -92,6 +91,7 @@ const Navbar = () => {
           <Link to={"/login"} style={{ textDecoration: "none" }}>
             <MenuItem>SIGN IN </MenuItem>
           </Link>
+            <MenuItem>LOGOUT </MenuItem>
           <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">

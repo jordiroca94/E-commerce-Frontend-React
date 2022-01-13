@@ -91,7 +91,7 @@ const Login = () => {
             LOGIN
           </Button>
           {error && (
-            <Error>Credentials are not correct, please try again.</Error>
+            <Error>Credentials are not correct.</Error>
           )}
           <Link to={"/signup"}>
             <NotMember>Not a member? Create a new account</NotMember>

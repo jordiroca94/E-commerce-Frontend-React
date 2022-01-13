@@ -61,12 +61,14 @@ const Right = styled.div`
   ${mobile({ flex: 2, justifyContent: "center" })};
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.a`
   font-size: 14px;
   cursor: pointer;
+  color: grey;
   margin-left: 25px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })};
 `;
+
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart.quantity);
 
@@ -84,8 +86,12 @@ const Navbar = () => {
           <Logo> MY-WAY </Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN </MenuItem>
+          <Link to={"/signup"} style={{ textDecoration: "none" }}>
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to={"/login"} style={{ textDecoration: "none" }}>
+            <MenuItem>SIGN IN </MenuItem>
+          </Link>
           <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">

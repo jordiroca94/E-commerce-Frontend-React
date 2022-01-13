@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { login } from "../redux/apiCalls";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -49,7 +50,8 @@ const Button = styled.button`
   }
 `;
 
-const Link = styled.a`
+const NotMember = styled.a`
+  color: grey;
   margin: 5px 0px;
   front-size: 12px;
   text-decoration: underline;
@@ -91,7 +93,9 @@ const Login = () => {
           {error && (
             <Error>Credentials are not correct, please try again.</Error>
           )}
-          <Link>Not a member? Create a new account</Link>
+          <Link to={"/signup"}>
+            <NotMember>Not a member? Create a new account</NotMember>
+          </Link>
         </Form>
       </Wrapper>
     </Container>

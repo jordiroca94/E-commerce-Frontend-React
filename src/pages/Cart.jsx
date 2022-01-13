@@ -162,7 +162,7 @@ const Cart = () => {
           tokenId: stripeToken.id,
           amount: 500,
         });
-        history.push("/success",{data:res.data});
+        history.push("/success", { stripeData: res.data, products: cart });
       } catch {}
     };
     stripeToken && makeRequest();
@@ -179,7 +179,6 @@ const Cart = () => {
             <TopText>Shopping Bag(2)</TopText>
             <TopText> Wishlist (0)</TopText>
           </TopTexts>
-          <TopButton type="filled">Checkout Now</TopButton>
         </Top>
         <Bottom>
           <Info>

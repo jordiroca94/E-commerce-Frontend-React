@@ -50,7 +50,7 @@ function Newsletter() {
       <Title>Newsletter</Title>
       <Desc>Get updated with the most popular products</Desc>
       <InputContainer>
-        <Input placeholder="Your email" />
+        <Input placeholder="NEWSLETTER NOT AVAILABLE YET, VERY SOON..." />
         <Button>
           <Send />
         </Button>

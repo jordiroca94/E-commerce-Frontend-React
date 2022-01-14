@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #C0C0C0;
   ${mobile({ padding: "10px 0px" })};
 `;
 const Left = styled.div`
@@ -72,7 +73,9 @@ const Navbar = () => {
           <Link to={"/login"} style={{ textDecoration: "none" }}>
             <MenuItem>SIGN IN </MenuItem>
           </Link>
-            <MenuItem>LOGOUT </MenuItem>
+          <Link to={"/profile"} style={{ textDecoration: "none" }}>
+            <MenuItem>MY ACCOUNT </MenuItem>
+            </Link>
           <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">

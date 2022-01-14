@@ -142,13 +142,13 @@ const Product = () => {
   };
 
   const handleClick = () => {
-    dispatch(addProduct({ ...product, quantity, color,size }));
+    dispatch(addProduct({ ...product, quantity, color, size }));
   };
 
   return (
     <Container>
-      <Navbar />
       <Announcement />
+      <Navbar />
       <Wrapper>
         <ImgContainer>
           <Image src={product.img} />

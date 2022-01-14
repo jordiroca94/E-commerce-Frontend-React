@@ -74,12 +74,14 @@ const Login = () => {
   };
 
   return (
+    <div>
     <Container>
       <Wrapper>
         <Title>SIGN IN </Title>
         <Form>
           <Input
             placeholder="username"
+            type="text"
             onChange={(e) => setUsername(e.target.value)}
           />
           <Input
@@ -99,6 +101,7 @@ const Login = () => {
         </Form>
       </Wrapper>
     </Container>
+    </div>
   );
 };
 

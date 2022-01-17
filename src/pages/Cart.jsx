@@ -8,7 +8,7 @@ import { mobile } from "../responsive";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -175,7 +175,10 @@ const Cart = () => {
       <Wrapper>
         <Title>Your Bag</Title>
         <Top>
-          <TopButton>Continue Shopping</TopButton>
+        <Link to="/">
+                 <TopButton>Continue Shopping</TopButton>
+        </Link>
+   
           <TopTexts>
             <TopText></TopText>
             <TopText> </TopText>

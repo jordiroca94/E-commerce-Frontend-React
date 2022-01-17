@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #C0C0C0;
+
   ${mobile({ padding: "10px 0px" })};
 `;
 const Left = styled.div`
@@ -32,7 +32,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  color:gray;
+  color: gray;
   ${mobile({ fontSize: "24px" })};
 `;
 
@@ -58,11 +58,9 @@ const Navbar = () => {
   return (
     <Container className="container">
       <Wrapper>
-        <Left>
-         
-        </Left>
+        <Left></Left>
         <Center>
-          <Link to={"/"} style={{ textDecoration: "none",  }}>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
             <Logo> MY-WAY </Logo>
           </Link>
         </Center>
@@ -73,9 +71,6 @@ const Navbar = () => {
           <Link to={"/login"} style={{ textDecoration: "none" }}>
             <MenuItem>SIGN IN </MenuItem>
           </Link>
-          <Link to={"/profile"} style={{ textDecoration: "none" }}>
-            <MenuItem>MY ACCOUNT </MenuItem>
-            </Link>
           <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">
